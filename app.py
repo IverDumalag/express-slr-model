@@ -43,3 +43,10 @@ def predict():
 
     class_id = int(np.argmax(preds, axis=1)[0])
     return jsonify({'predicted_class': class_id})
+
+@app.route('/')
+def home():
+    return 'Hello, Flask!'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
