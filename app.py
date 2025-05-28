@@ -4,7 +4,7 @@ import numpy as np
 import cv2, tempfile, os
 
 app = Flask(__name__)
-model = tf.keras.models.load_model('fslsavedmodel_alphabet.tf')
+model = tf.keras.models.load_model('fslsavedmodel_alphabet.keras')
 
 @app.route('/predict', methods=['POST'])
 def predict():
